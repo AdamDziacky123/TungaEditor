@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Absolventska
 {
-    public class UCManager : UserControl
+    public class UCManager
     {
         List<UserControl> controls = new List<UserControl>();
         List<Panel> panels = new List<Panel>();
