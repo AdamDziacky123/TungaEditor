@@ -90,15 +90,14 @@
     <Compile Include="SecondUserControl.Designer.cs">
       <DependentUpon>SecondUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Serialization.cs" />
     <Compile Include="SettingsUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SettingsUserControl.Designer.cs">
       <DependentUpon>SettingsUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCManager.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="UCManager.cs" />
     <EmbeddedResource Include="FirstUserControl.resx">
       <DependentUpon>FirstUserControl.cs</DependentUpon>
     </EmbeddedResource>

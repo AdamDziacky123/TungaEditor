@@ -341,7 +341,7 @@ namespace Absolventska /////////////////////////////////////////////////////////
         #endregion
 
         #region Exporting files
-        private void WordsToList()
+        private void WordsToList() //Into Serialization class
         {
             for (int i = 0; i < TBs.Count; i++) // checking if the word was not already used
             {
@@ -389,7 +389,7 @@ namespace Absolventska /////////////////////////////////////////////////////////
             }
         }
 
-        private void ExportFiles()
+        private void ExportFiles() //Into Serialization class
         {
             if (words.Count == numOfWords && paths.Count == numOfWords)
             {

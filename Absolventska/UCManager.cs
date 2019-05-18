@@ -18,10 +18,7 @@ namespace Absolventska
         protected string path_files = Environment.CurrentDirectory + @"\Tunga Files";
 
         private static UCManager instance = new UCManager();
-
-        //SecondUserControl content
-        //
-
+            
         public static UCManager GetInstance()
         {
             return instance;
