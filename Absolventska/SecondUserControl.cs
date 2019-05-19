@@ -10,24 +10,24 @@ using System.Windows.Forms;
 using System.IO;
 using System.Security;
 
-namespace Absolventska /////////////////////////////////////////////////////////////////////////// ak necham len jedno slovo, vyhadzuje aj chybu word alredady used
+namespace Absolventska 
 {
     public partial class SecondUserControl : UserControl//: UCManager
     {
         #region Variables
-        UCManager manager = UCManager.GetInstance();
+        protected UCManager manager = UCManager.GetInstance();
+        SerializationClass serialization = new SerializationClass();
 
-        protected List<Button> browseBTNs = new List<Button>(); //SUC browse btns
-        protected List<PictureBox> PBs = new List<PictureBox>(); //SUC pictureboxes
-        protected List<TextBox> TBs = new List<TextBox>(); // SUC textboxes
+        public List<Button> browseBTNs; //SUC browse btns
+        public List<PictureBox> PBs; //SUC pictureboxes
+        public List<TextBox> TBs; // SUC textboxes
 
-        protected Dictionary<int, string> paths = new Dictionary<int, string>(); //index + path
-        protected Dictionary<int, string> words = new Dictionary<int, string>(); // index + words
-        protected Dictionary<string, string> output = new Dictionary<string, string>(); // words + paths
+        protected Dictionary<int, string> paths; //index + path
+        protected Dictionary<int, string> words; // index + words
+        protected Dictionary<string, string> output; // words + paths
 
-        //string wordsFilePath = Environment.CurrentDirectory + "/Words.txt";
+        public static int numOfWords;
         int index = 0;
-        int numOfWords;
         #endregion
 
         public SecondUserControl()
@@ -38,14 +38,32 @@ namespace Absolventska /////////////////////////////////////////////////////////
 
         private void SecondUserControl_Load(object sender, EventArgs e)
         {
-            if (numericUpDown1.Value > 0) numOfWords = (int)numericUpDown1.Value * 2;
-            else numOfWords = 10;
+            if (numericUpDown1.Value > 0)
+            {
+                numOfWords = (int)numericUpDown1.Value * 2;
+                serialization.SetNumOfWords(numOfWords);
+            }
+
+            else
+            {
+                numOfWords = 10;
+                serialization.SetNumOfWords(numOfWords);
+            }
+
         }
 
         #region InitiateFunctions 
 
         private void Initiate()
         {
+            browseBTNs = serialization.browseBTNs;
+            TBs = serialization.TBs;
+            PBs = serialization.PBs;
+            paths = serialization.paths;
+            words = serialization.words;
+            output = serialization.output;
+            serialization.SetManager(manager);
+
             ButtonsToList(); //just adding original objects do lists - in case that teacher doesnt want to change the number
             PBsToList();
             TBsToList();
@@ -61,6 +79,7 @@ namespace Absolventska /////////////////////////////////////////////////////////
             }
 
             btnReset.Click += new EventHandler(Reset);
+
         }
 
         private void ButtonsToList()
@@ -108,7 +127,6 @@ namespace Absolventska /////////////////////////////////////////////////////////
         #endregion
 
         #region OtherMethods
-
         private void Reset(object sender, EventArgs e)
         {
             foreach (TextBox TB in TBs)
@@ -127,7 +145,7 @@ namespace Absolventska /////////////////////////////////////////////////////////
             index = 0;
         } //using two types of same function - one for button as eventHandler 
 
-        private void Reset()
+        protected void Reset()
         {
             foreach (TextBox TB in TBs)
             {
@@ -222,7 +240,7 @@ namespace Absolventska /////////////////////////////////////////////////////////
         private void BTNsetRows_Click(object sender, EventArgs e) // creating dynamic table + assigning objects + adding them to lists
         {
             //List<Button> BTNList = new List<Button>();
-            Image image = Image.FromFile(@"D:\Podklady\Absolventská\success.png"); //Success image
+            Image image = Image.FromFile(@"D:\Podklady\Absolventská\Icons\success.png"); //Success image
             int tmp = (int)numericUpDown1.Value;
 
             PBs.Clear(); //clearing original lists
@@ -334,14 +352,15 @@ namespace Absolventska /////////////////////////////////////////////////////////
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            WordsToList();
-            ExportFiles();
+            serialization.WordsToList();
+            serialization.ExportFiles();
+            Reset();
         }
 
         #endregion
 
         #region Exporting files
-        private void WordsToList() //Into Serialization class
+        /*private void WordsToList() //Into Serialization class
         {
             for (int i = 0; i < TBs.Count; i++) // checking if the word was not already used
             {
@@ -411,7 +430,7 @@ namespace Absolventska /////////////////////////////////////////////////////////
             }
 
             else MessageBox.Show("Missing words or pictures. Files export not successful. Tap the Reset button.");
-        }
+        }*/
         #endregion
 
         #region Sharepoint
@@ -505,6 +524,7 @@ namespace Absolventska /////////////////////////////////////////////////////////
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             numOfWords = (int)numericUpDown1.Value * 2;
+            serialization.SetNumOfWords(numOfWords);
         }
     }
 }

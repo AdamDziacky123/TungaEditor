@@ -90,7 +90,7 @@
     <Compile Include="SecondUserControl.Designer.cs">
       <DependentUpon>SecondUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Serialization.cs" />
+    <Compile Include="SerializationClass.cs" />
     <Compile Include="SettingsUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

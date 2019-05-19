@@ -1,15 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Absolventska
 {
-    class Serialization
+    class SerializationClass //: SecondUserControl
     {
-        /*
-                 private void WordsToList()
+        UCManager manager;
+
+        public List<Button> browseBTNs = new List<Button>(); //SUC browse btns
+        public List<PictureBox> PBs = new List<PictureBox>(); //SUC pictureboxes
+        public List<TextBox> TBs = new List<TextBox>(); // SUC textboxes
+
+        public Dictionary<int, string> paths = new Dictionary<int, string>(); //index + path
+        public Dictionary<int, string> words = new Dictionary<int, string>(); // index + words
+        public Dictionary<string, string> output = new Dictionary<string, string>(); // words + paths
+
+        private int numOfWords;
+
+        public void SetNumOfWords(int num)
+        {
+            numOfWords = num;
+        }
+
+        public void SetManager(UCManager uCManager)
+        {
+            manager = uCManager;
+        }
+
+        public void WordsToList()
         {
             for (int i = 0; i < TBs.Count; i++) // checking if the word was not already used
             {
@@ -47,7 +70,7 @@ namespace Absolventska
             else Directory.CreateDirectory(manager.GetPath_files());
 
             if (File.Exists(manager.GetPath_words())) File.Delete(manager.GetPath_words());
-           
+
             using (StreamWriter writer = new StreamWriter(manager.GetPath_words()))
             {
                 for (int i = 0; i < words.Count; i++)
@@ -57,7 +80,7 @@ namespace Absolventska
             }
         }
 
-        private void ExportFiles()
+        public void ExportFiles()
         {
             if (words.Count == numOfWords && paths.Count == numOfWords)
             {
@@ -74,13 +97,13 @@ namespace Absolventska
                     File.Copy(output.Values.ElementAt(i), manager.GetPath_files() + "/" + output.Keys.ElementAt(i) + ".jpg", true);
                 }
 
-                Reset();
+                //Reset();
                 MessageBox.Show("Files exported successfully.");
             }
 
             else MessageBox.Show("Missing words or pictures. Files export not successful. Tap the Reset button.");
         }
  
-         */
+         
     }
 }
