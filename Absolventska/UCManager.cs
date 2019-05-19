@@ -48,7 +48,6 @@ namespace Absolventska
 
         #endregion
 
-
         public void Initiate(Form1 form)
         {
             AddButtonsToList(form);

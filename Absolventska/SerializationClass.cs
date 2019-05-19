@@ -73,6 +73,8 @@ namespace Absolventska
 
             using (StreamWriter writer = new StreamWriter(manager.GetPath_words()))
             {
+                writer.WriteLine(numOfWords);
+
                 for (int i = 0; i < words.Count; i++)
                 {
                     writer.WriteLine(words.ElementAt(i).Value);
@@ -88,9 +90,6 @@ namespace Absolventska
                 {
                     output.Add(words[i], paths[i]);
                 }
-
-                //ExportToSharePoint();
-                //MessageBox.Show("Output created.");
 
                 for (int i = 0; i < output.Count; i++)
                 {

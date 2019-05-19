@@ -20,7 +20,8 @@ namespace Absolventska
         public Form1()
         {
             InitializeComponent();
-            //  MessageBox.Show(Directory.GetDirectories("https://vzdelavameprebuducnost-my.sharepoint.com/personal/adam_dziacky_studentstc_sk/_layouts/15/onedrive.aspx").FirstOrDefault().ToString());            
+            Icon icon = Icon.ExtractAssociatedIcon(@"D:\Podklady\Absolventská\Logo\Icon.ico");
+            this.Icon = icon;
         }
 
         private void Form1_Load(object sender, EventArgs e)
