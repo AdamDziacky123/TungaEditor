@@ -40,7 +40,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(446, 111);
+            this.pictureBox1.Location = new System.Drawing.Point(448, 111);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 333);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -54,7 +54,7 @@
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.btnStart.Location = new System.Drawing.Point(510, 561);
+            this.btnStart.Location = new System.Drawing.Point(512, 572);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(173, 58);
             this.btnStart.TabIndex = 11;
@@ -76,7 +76,7 @@
             // 
             this.lblIntroduction.AutoSize = true;
             this.lblIntroduction.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblIntroduction.Location = new System.Drawing.Point(96, 477);
+            this.lblIntroduction.Location = new System.Drawing.Point(106, 487);
             this.lblIntroduction.Name = "lblIntroduction";
             this.lblIntroduction.Size = new System.Drawing.Size(984, 23);
             this.lblIntroduction.TabIndex = 13;

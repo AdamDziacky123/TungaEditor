@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Absolventska
@@ -36,14 +30,24 @@ namespace Absolventska
             if (textBox1.Text.Count() >= 0)
             {
                 manager.SetPath_files(textBox1.Text);
+                manager.SetPath_words(textBox1.Text + @"\Words.txt");
                 MessageBox.Show("Path changed successfully.");
             }
             else MessageBox.Show("Please, insert a path.");
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void btnDefault_Click(object sender, EventArgs e)
         {
-            textBox1.Text = manager.GetPath_files();
+            textBox1.Text = Environment.CurrentDirectory + @"\Tunga Files";
+
+            if (textBox1.Text.Count() >= 0)
+            {
+                manager.SetPath_files(textBox1.Text);
+                manager.SetPath_words(textBox1.Text + @"\Words.txt");
+                MessageBox.Show("Path set to default.");
+            }
+
+            else MessageBox.Show("Please, insert a path.");
         }
     }
 }

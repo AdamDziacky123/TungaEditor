@@ -14,7 +14,7 @@ namespace Absolventska
         List<Panel> panels = new List<Panel>();
         List<Button> buttons = new List<Button>();
 
-        protected string path_words = Environment.CurrentDirectory + @"\Tunga Files/Words.txt";
+        protected string path_words = Environment.CurrentDirectory + @"\Tunga Files\Words.txt";
         protected string path_files = Environment.CurrentDirectory + @"\Tunga Files";
 
         private static UCManager instance = new UCManager();

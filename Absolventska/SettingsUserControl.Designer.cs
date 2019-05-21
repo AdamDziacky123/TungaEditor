@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.btnReset = new System.Windows.Forms.Button();
+            this.btnDefault = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -49,19 +49,19 @@
             this.textBox11.Text = "Settings";
             this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnReset
+            // btnDefault
             // 
-            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.btnReset.Location = new System.Drawing.Point(714, 639);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(173, 58);
-            this.btnReset.TabIndex = 10;
-            this.btnReset.Text = "Dismiss";
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnDefault.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.btnDefault.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDefault.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnDefault.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
+            this.btnDefault.Location = new System.Drawing.Point(714, 639);
+            this.btnDefault.Name = "btnDefault";
+            this.btnDefault.Size = new System.Drawing.Size(173, 58);
+            this.btnDefault.TabIndex = 10;
+            this.btnDefault.Text = "Set To Default";
+            this.btnDefault.UseVisualStyleBackColor = false;
+            this.btnDefault.Click += new System.EventHandler(this.btnDefault_Click);
             // 
             // btnConfirm
             // 
@@ -102,7 +102,7 @@
             this.btnChangePath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePath.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnChangePath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.btnChangePath.Location = new System.Drawing.Point(508, 303);
+            this.btnChangePath.Location = new System.Drawing.Point(508, 317);
             this.btnChangePath.Name = "btnChangePath";
             this.btnChangePath.Size = new System.Drawing.Size(173, 58);
             this.btnChangePath.TabIndex = 14;
@@ -119,7 +119,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnDefault);
             this.Controls.Add(this.btnConfirm);
             this.Name = "SettingsUserControl";
             this.Size = new System.Drawing.Size(1200, 700);
@@ -131,7 +131,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnDefault;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
