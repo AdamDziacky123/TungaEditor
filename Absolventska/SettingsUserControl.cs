@@ -16,6 +16,8 @@ namespace Absolventska
 
         private void btnChangePath_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("To function properly, be sure this path is the same as application path. Otherwise, some problems might occur.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             using (FolderBrowserDialog OFD = new FolderBrowserDialog())
             {
                 if (OFD.ShowDialog() == DialogResult.OK)
@@ -27,7 +29,7 @@ namespace Absolventska
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Count() >= 0)
+            if (textBox1.Text.Count() > 0)
             {
                 manager.SetPath_files(textBox1.Text);
                 manager.SetPath_words(textBox1.Text + @"\Words.txt");

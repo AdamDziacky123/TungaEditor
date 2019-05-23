@@ -91,9 +91,10 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Silver;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.textBox1.Location = new System.Drawing.Point(481, 222);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(564, 22);
+            this.textBox1.Size = new System.Drawing.Size(564, 26);
             this.textBox1.TabIndex = 13;
             // 
             // btnChangePath

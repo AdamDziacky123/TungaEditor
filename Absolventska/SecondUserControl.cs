@@ -234,7 +234,7 @@ namespace Absolventska
         private void BTNsetRows_Click(object sender, EventArgs e) // creating dynamic table + assigning objects + adding them to lists
         {
             //List<Button> BTNList = new List<Button>();
-            Image image = Image.FromFile(@"D:\Podklady\Absolventská\Icons\success.png"); //Success image
+            Image image = Absolventska.Properties.Resources.success; //Success image
             int tmp = (int)numericUpDown1.Value;
 
             PBs.Clear(); //clearing original lists
