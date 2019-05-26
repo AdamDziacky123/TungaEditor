@@ -332,7 +332,6 @@
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Button btnMail;
         private System.Windows.Forms.Button btnMinimize;
-        private FirstUserControl firstCustomControl1;
         private System.Windows.Forms.Button btnSettings;
         private SecondUserControl secondUserControl1;
         private SettingsUserControl settingsUserControl1;

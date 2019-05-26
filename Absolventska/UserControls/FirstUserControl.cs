@@ -21,19 +21,9 @@ namespace Absolventska
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            //manager.Initiate((Form1)Form1.ActiveForm);
             manager.ControlToFront(1);
             manager.SetPanels(1);
         }
 
-        private void FirstUserControl_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

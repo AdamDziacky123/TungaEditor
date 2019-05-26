@@ -15,6 +15,8 @@ namespace Absolventska
             textBox1.Text = manager.GetPath_files();
         }
 
+        #region btn_Click
+
         private void btnChangePath_Click(object sender, EventArgs e)
         {
             MessageBox.Show("To function properly, be sure this path is the same as application path. Otherwise, some problems might occur.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -39,9 +41,9 @@ namespace Absolventska
             }
 
             else MessageBox.Show("Please, insert a new path.");
-        }
+        } //apply changes
 
-        private void btnDefault_Click(object sender, EventArgs e)
+        private void btnDefault_Click(object sender, EventArgs e) // setting default path + adding to register
         {
             textBox1.Text = Environment.CurrentDirectory + @"\Tunga Files";
 
@@ -55,5 +57,7 @@ namespace Absolventska
 
             else MessageBox.Show("Please, insert a path.");
         }
+
+        #endregion
     }
 }

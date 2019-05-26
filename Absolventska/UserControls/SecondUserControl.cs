@@ -6,9 +6,10 @@ using System.Windows.Forms;
 
 namespace Absolventska 
 {
-    public partial class SecondUserControl : UserControl//: UCManager
+    public partial class SecondUserControl : UserControl
     {
         #region Variables
+
         protected UCManager manager = UCManager.GetInstance();
         SerializationClass serialization = SerializationClass.GetInstance();
 
@@ -22,29 +23,8 @@ namespace Absolventska
 
         public static int numOfWords;
         int index = 0;
+
         #endregion
-
-        public SecondUserControl()
-        {
-            InitializeComponent();
-            Initiate();
-        }
-
-        private void SecondUserControl_Load(object sender, EventArgs e)
-        {
-            if (numericUpDown1.Value > 0)
-            {
-                numOfWords = (int)numericUpDown1.Value * 2;
-                serialization.SetNumOfWords(numOfWords);
-            }
-
-            else
-            {
-                numOfWords = 10;
-                serialization.SetNumOfWords(numOfWords);
-            }
-
-        }
 
         #region InitiateFunctions 
 
@@ -56,27 +36,17 @@ namespace Absolventska
             paths = serialization.paths;
             words = serialization.words;
             output = serialization.output;
-            
+
             ButtonsToList(); //just adding original objects do lists - in case that teacher doesnt want to change the number
             PBsToList();
             TBsToList();
 
-            foreach (Button btn in browseBTNs) //shortening code
-            {
-                btn.Click += new EventHandler(OnClick);
-            }
-
-            foreach (TextBox TB in TBs) //shortening code
-            {
-                TB.TextChanged += new EventHandler(TbTextChanged);
-            }
-
-            btnReset.Click += new EventHandler(Reset);
+            AssignFunctions();
         }
 
-        private void ButtonsToList()
+        private void ButtonsToList() //default case - 5 rows
         {
-            for (int i = 3; i < 13; i++)
+            for (int i = 1; i < 11; i++)
             {
                 browseBTNs.Add(Controls.Find(string.Format("button{0}", i), true).FirstOrDefault() as Button);
             }
@@ -101,7 +71,8 @@ namespace Absolventska
         #endregion
 
         #region OtherMethods
-        private void Reset(object sender, EventArgs e)
+
+        private void Reset(object sender, EventArgs e) //clears all textboxes and lists
         {
             foreach (TextBox TB in TBs)
             {
@@ -117,9 +88,9 @@ namespace Absolventska
             if (words != null || words.Count > 0) words.Clear();
             if (output != null || output.Count > 0) output.Clear();
             index = 0;
-        } //using two types of same function - one for button as eventHandler 
+        } 
 
-        protected void Reset()
+        protected void Reset() //using two types of same function - one for button as eventHandler 
         {
             foreach (TextBox TB in TBs)
             {
@@ -149,6 +120,8 @@ namespace Absolventska
             {
                 TB.TextChanged += new EventHandler(TbTextChanged);
             }
+
+            btnReset.Click += new EventHandler(Reset);
         }
 
         private void AddControlsToLists()
@@ -170,19 +143,19 @@ namespace Absolventska
 
             using (OpenFileDialog OFD = new OpenFileDialog())
             {
-                OFD.Filter = "JPG files (.jpg)|*.jpg";
+                OFD.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png"; //adding several file type options
 
                 if (OFD.ShowDialog() == DialogResult.OK)
                 {
                     index = browseBTNs.IndexOf(btn);
                     filePath = OFD.FileName;
 
-                    try
+                    try //trying, if word or picture was not already used.
                     {
                         if (!paths.ContainsKey(index) && !paths.ContainsValue(filePath)) paths.Add(index, filePath);
                         else
                         {
-                            MessageBox.Show("Image was already used.");
+                            MessageBox.Show("Image was already used.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
 
                         if (TBs[index].Text.Length > 0 && paths.ContainsKey(index)) PBs[index].Visible = true;
@@ -190,7 +163,7 @@ namespace Absolventska
 
                     catch (System.ArgumentException e)
                     {
-                        MessageBox.Show("Image already assigned. Please use the Reset button.");
+                        MessageBox.Show("Image already assigned. Please use the Reset button.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -200,7 +173,7 @@ namespace Absolventska
         {
             Button btn = sender as Button;
             BrowseBTNFunction(btn);
-        }
+        } //for Browse buttons
 
         private void TbTextChanged(object sender, EventArgs e)
         {
@@ -209,7 +182,7 @@ namespace Absolventska
             index = TBs.IndexOf(tb);
             if (paths.ContainsKey(index) && tb.Text.Length > 0) PBs[index].Visible = true;
             else PBs[index].Visible = false;
-        }
+        } //checking if it should show success icon
 
         private void BTNsetRows_Click(object sender, EventArgs e) // creating dynamic table + assigning objects + adding them to lists
         {
@@ -245,7 +218,7 @@ namespace Absolventska
 
             for (int i = 0; i < tableLayoutPanel1.RowCount; i++) //adding all objects into table + adding objects to lists
             {
-                tableLayoutPanel1.Controls.Add(new TextBox
+                tableLayoutPanel1.Controls.Add(new TextBox //object parametres
                 {
                     TextAlign = HorizontalAlignment.Center,
                     BackColor = Color.FromArgb(36, 46, 64),
@@ -316,12 +289,12 @@ namespace Absolventska
                     Dock = DockStyle.Fill,
                     Anchor = AnchorStyles.None,
                     Visible = false,
-                    Name = string.Format("PB{0}{1}", 5, i)
+                    Name = string.Format("PB{0}{1}", 5, i)                    
                 }, 5, i);
             }
             
             AddControlsToLists();
-            AssignFunctions();
+            AssignFunctions(); //assigning fuctions to the new buttons
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -332,100 +305,33 @@ namespace Absolventska
             Reset();
         }
 
-        #endregion
-
-        #region Sharepoint
-        /*private void ExportToSharePoint()
-        {
-            string library_name = "Documents";
-            string siteUrl = "https://vzdelavameprebuducnost.sharepoint.com/sites/Private"; //"https://vzdelavameprebuducnost-my.sharepoint.com/personal/adam_dziacky_studentstc_sk/";
-            string passWord = "OFK2010Kurima<3";
-
-            SecureString securePassword = new SecureString();
-            SharePointOnlineCredentials credentials;
-
-            foreach (char c in passWord) securePassword.AppendChar(c);
-            credentials = new SharePointOnlineCredentials("adam.dziacky@studentstc.sk", securePassword);
-
-            if (output != null)
-            {
-                using (ClientContext ctx = new ClientContext(siteUrl))
-                {
-                    FileCreationInformation fcInfo = new FileCreationInformation();
-                    Web myWeb = ctx.Web;
-                    List myLibrary = myWeb.Lists.GetByTitle(library_name);
-
-                    ctx.Credentials = credentials;
-
-                    fcInfo.Url = "Words.txt";
-                    fcInfo.Overwrite = true;
-                    fcInfo.Content = System.IO.File.ReadAllBytes(wordsFilePath);
-
-                    myLibrary.RootFolder.Files.Add(fcInfo);
-                    myLibrary.Update();
-
-                    ctx.ExecuteQuery();
-
-                    foreach (var element in output)
-                    {
-                        fcInfo.Url = element.Key + ".jpg";
-                        fcInfo.Overwrite = true;
-                        //fcInfo.Content = System.IO.File.ReadAllBytes(filePath);
-                        fcInfo.Content = System.IO.File.ReadAllBytes(element.Value);
-
-                        myLibrary.RootFolder.Files.Add(fcInfo);
-                        myLibrary.Update();
-
-                        ctx.ExecuteQuery();
-                    }
-
-                }
-                MessageBox.Show("Files Exported to SharePoint");
-            }
-
-            else
-            {
-                MessageBox.Show("Something went wrong.");
-            }
-
-            Reset();
-        }
-
-        private void NewList()
-        {
-            string library_name = "Documents";
-            string siteUrl = "https://vzdelavameprebuducnost.sharepoint.com/sites/Private"; //"https://vzdelavameprebuducnost-my.sharepoint.com/personal/adam_dziacky_studentstc_sk/";
-            string passWord = "OFK2010Kurima<3";
-
-            SecureString securePassword = new SecureString();
-            SharePointOnlineCredentials credentials;
-
-            foreach (char c in passWord) securePassword.AppendChar(c);
-            credentials = new SharePointOnlineCredentials("adam.dziacky@studentstc.sk", securePassword);
-
-            using (ClientContext ctx = new ClientContext(siteUrl))
-            {
-                Web web = ctx.Web;
-                ListCreationInformation info = new ListCreationInformation();
-                info.Title = "New List";
-                info.Description = "New Description";
-                info.TemplateType = (int)ListTemplateType.Announcements;
-
-                List myList = web.Lists.Add(info);
-                myList.OnQuickLaunch = true;
-                myList.Update();
-
-                ctx.Credentials = credentials;
-                ctx.ExecuteQuery();
-            }
-            MessageBox.Show("List created");
-        }*/
-        #endregion
-
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             numOfWords = (int)numericUpDown1.Value * 2;
             serialization.SetNumOfWords(numOfWords);
+        }
+
+        #endregion
+
+        public SecondUserControl()
+        {
+            InitializeComponent();
+            Initiate();
+        }
+
+        private void SecondUserControl_Load(object sender, EventArgs e)
+        {
+            if (numericUpDown1.Value > 0)
+            {
+                numOfWords = (int)numericUpDown1.Value * 2;
+                serialization.SetNumOfWords(numOfWords);
+            }
+
+            else
+            {
+                numOfWords = 10;
+                serialization.SetNumOfWords(numOfWords);
+            }
         }
     }
 }

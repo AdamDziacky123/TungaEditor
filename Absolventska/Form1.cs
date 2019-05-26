@@ -32,6 +32,8 @@ namespace Absolventska
             SerializationClass.GetInstance().AddPathToReg();
         }
 
+        #region btn_Click
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             manager.SetPath_files(null,true);
@@ -83,5 +85,7 @@ namespace Absolventska
             Clipboard.SetText("adam.dziacky@studentstc.sk");
             MessageBox.Show("Mail adress copied to clipboard.");
         }
+
+        #endregion
     }
 }
