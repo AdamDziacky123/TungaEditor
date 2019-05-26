@@ -29,18 +29,13 @@ namespace Absolventska
             manager.Initiate(this);
             manager.ControlToFront(0);
             manager.SetPanels(0);
+            SerializationClass.GetInstance().AddPathToReg();
         }
-
-        private void FirstUserControl_Load(object sender, EventArgs e)
-        {
-            manager.Initiate(this);
-            manager.SetPanels(0);
-            manager.ControlToFront(0);
-        }
-
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            manager.SetPath_files(null,true);
+            SerializationClass.GetInstance().AddPathToReg();
             Application.Exit();
         }
 
@@ -83,9 +78,10 @@ namespace Absolventska
             else this.WindowState = FormWindowState.Normal;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnMail_Click(object sender, EventArgs e)
         {
-            //ShareManager manager = new ShareManager();
+            Clipboard.SetText("adam.dziacky@studentstc.sk");
+            MessageBox.Show("Mail adress copied to clipboard.");
         }
     }
 }

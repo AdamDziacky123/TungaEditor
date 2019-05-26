@@ -10,7 +10,7 @@ namespace Absolventska
     {
         #region Variables
         protected UCManager manager = UCManager.GetInstance();
-        SerializationClass serialization = new SerializationClass();
+        SerializationClass serialization = SerializationClass.GetInstance();
 
         public List<Button> browseBTNs; //SUC browse btns
         public List<PictureBox> PBs; //SUC pictureboxes
@@ -56,8 +56,7 @@ namespace Absolventska
             paths = serialization.paths;
             words = serialization.words;
             output = serialization.output;
-            serialization.SetManager(manager);
-
+            
             ButtonsToList(); //just adding original objects do lists - in case that teacher doesnt want to change the number
             PBsToList();
             TBsToList();
@@ -73,49 +72,30 @@ namespace Absolventska
             }
 
             btnReset.Click += new EventHandler(Reset);
-
         }
 
         private void ButtonsToList()
         {
-            browseBTNs.Add(button3);
-            browseBTNs.Add(button4);
-            browseBTNs.Add(button5);
-            browseBTNs.Add(button6);
-            browseBTNs.Add(button7);
-            browseBTNs.Add(button8);
-            browseBTNs.Add(button9);
-            browseBTNs.Add(button10);
-            browseBTNs.Add(button11);
-            browseBTNs.Add(button12);
+            for (int i = 3; i < 13; i++)
+            {
+                browseBTNs.Add(Controls.Find(string.Format("button{0}", i), true).FirstOrDefault() as Button);
+            }
         }
 
         private void PBsToList()
         {
-            PBs.Add(pictureBox1);
-            PBs.Add(pictureBox2);
-            PBs.Add(pictureBox3);
-            PBs.Add(pictureBox4);
-            PBs.Add(pictureBox5);
-            PBs.Add(pictureBox6);
-            PBs.Add(pictureBox7);
-            PBs.Add(pictureBox8);
-            PBs.Add(pictureBox9);
-            PBs.Add(pictureBox10);
+            for (int i = 1; i < 11; i++)
+            {
+                PBs.Add(Controls.Find(string.Format("pictureBox{0}", i), true).FirstOrDefault() as PictureBox);
+            }
         }
 
         private void TBsToList()
         {
-            TBs.Add(textBox1);
-            TBs.Add(textBox2);
-            TBs.Add(textBox3);
-            TBs.Add(textBox4);
-            TBs.Add(textBox5);
-            TBs.Add(textBox6);
-            TBs.Add(textBox7);
-            TBs.Add(textBox8);
-            TBs.Add(textBox9);
-            TBs.Add(textBox10);
+            for (int i = 1; i < 11; i++)
+            {
+                TBs.Add(Controls.Find(string.Format("textBox{0}", i), true).FirstOrDefault() as TextBox);
+            }
         }
 
         #endregion
@@ -348,83 +328,10 @@ namespace Absolventska
         {
             serialization.WordsToList();
             serialization.ExportFiles();
+            //serialization.AddPathToReg();
             Reset();
         }
 
-        #endregion
-
-        #region Exporting files
-        /*private void WordsToList() //Into Serialization class
-        {
-            for (int i = 0; i < TBs.Count; i++) // checking if the word was not already used
-            {
-                if (!words.ContainsKey(i) && !words.ContainsValue(TBs[i].Text))
-                {
-                    if (TBs[i].Text.Length > 0) words.Add(i, TBs[i].Text);
-
-                    else
-                    {
-                        //MessageBox.Show("Some words are missing. Please, tap the reset button");
-                        break;
-                    }
-                }
-
-                else
-                {
-                    MessageBox.Show("Word already used. Type in another word.");
-                    TBs[i].Text = string.Empty;
-                    PBs[i].Visible = false;
-                    words.Clear();
-                    break;
-                }
-            }
-
-            if (Directory.Exists(manager.GetPath_files()) && Directory.GetFiles(manager.GetPath_files()).Count() > 0)
-            {
-                DirectoryInfo di = new DirectoryInfo(manager.GetPath_files());
-
-                foreach (FileInfo fi in di.GetFiles())
-                {
-                    fi.Delete();
-                }
-            }
-
-            else Directory.CreateDirectory(manager.GetPath_files());
-
-            if (File.Exists(manager.GetPath_words())) File.Delete(manager.GetPath_words());
-           
-            using (StreamWriter writer = new StreamWriter(manager.GetPath_words()))
-            {
-                for (int i = 0; i < words.Count; i++)
-                {
-                    writer.WriteLine(words.ElementAt(i).Value);
-                }
-            }
-        }
-
-        private void ExportFiles() //Into Serialization class
-        {
-            if (words.Count == numOfWords && paths.Count == numOfWords)
-            {
-                for (int i = 0; i < TBs.Count; i++)
-                {
-                    output.Add(words[i], paths[i]);
-                }
-
-                //ExportToSharePoint();
-                //MessageBox.Show("Output created.");
-
-                for (int i = 0; i < output.Count; i++)
-                {
-                    File.Copy(output.Values.ElementAt(i), manager.GetPath_files() + "/" + output.Keys.ElementAt(i) + ".jpg", true);
-                }
-
-                Reset();
-                MessageBox.Show("Files exported successfully.");
-            }
-
-            else MessageBox.Show("Missing words or pictures. Files export not successful. Tap the Reset button.");
-        }*/
         #endregion
 
         #region Sharepoint

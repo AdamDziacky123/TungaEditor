@@ -14,7 +14,8 @@ namespace Absolventska
         List<Panel> panels = new List<Panel>();
         List<Button> buttons = new List<Button>();
 
-        protected string path_words = Environment.CurrentDirectory + @"\Tunga Files\Words.txt";
+        protected string path_words = Environment.CurrentDirectory + @"\Tunga Files\Words.txt"; //save environment dir to string
+        
         protected string path_files = Environment.CurrentDirectory + @"\Tunga Files";
 
         private static UCManager instance = new UCManager();
@@ -26,9 +27,10 @@ namespace Absolventska
 
         #region PathMethods
 
-        public void SetPath_files(string newPathFiles)
+        public void SetPath_files(string newPathFiles, bool setDefault)
         {
-            path_files = newPathFiles;
+            if(!setDefault) path_files = newPathFiles;
+            else path_files = Environment.CurrentDirectory + @"\Tunga Files";
         }
 
         public void SetPath_words(string newPathWords)
@@ -94,5 +96,6 @@ namespace Absolventska
             panels[0].BringToFront();
             panels[1].BringToFront();
         }
+
     }
 }

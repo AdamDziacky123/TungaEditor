@@ -21,7 +21,7 @@ namespace Absolventska
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            manager.Initiate((Form1)Form1.ActiveForm);
+            //manager.Initiate((Form1)Form1.ActiveForm);
             manager.ControlToFront(1);
             manager.SetPanels(1);
         }

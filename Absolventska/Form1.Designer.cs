@@ -34,17 +34,17 @@
             this.sidePanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnPictures = new System.Windows.Forms.Button();
-            this.btnWelcome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnLinkedIn = new System.Windows.Forms.Button();
             this.btnMail = new System.Windows.Forms.Button();
             this.btnFB = new System.Windows.Forms.Button();
+            this.btnPictures = new System.Windows.Forms.Button();
+            this.btnWelcome = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.firstUserControl1 = new Absolventska.FirstUserControl();
             this.settingsUserControl1 = new Absolventska.SettingsUserControl();
             this.secondUserControl1 = new Absolventska.SecondUserControl();
@@ -115,6 +115,50 @@
             this.panel4.Size = new System.Drawing.Size(183, 31);
             this.panel4.TabIndex = 3;
             // 
+            // btnLinkedIn
+            // 
+            this.btnLinkedIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
+            this.btnLinkedIn.BackgroundImage = global::Absolventska.Properties.Resources.linkedin;
+            this.btnLinkedIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLinkedIn.FlatAppearance.BorderSize = 0;
+            this.btnLinkedIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLinkedIn.Location = new System.Drawing.Point(130, 3);
+            this.btnLinkedIn.Name = "btnLinkedIn";
+            this.btnLinkedIn.Size = new System.Drawing.Size(25, 25);
+            this.btnLinkedIn.TabIndex = 7;
+            this.btnLinkedIn.UseVisualStyleBackColor = false;
+            this.btnLinkedIn.Click += new System.EventHandler(this.btnLinkedIn_Click);
+            // 
+            // btnMail
+            // 
+            this.btnMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
+            this.btnMail.BackgroundImage = global::Absolventska.Properties.Resources.envelope;
+            this.btnMail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMail.FlatAppearance.BorderSize = 0;
+            this.btnMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMail.Image = ((System.Drawing.Image)(resources.GetObject("btnMail.Image")));
+            this.btnMail.Location = new System.Drawing.Point(72, 4);
+            this.btnMail.Name = "btnMail";
+            this.btnMail.Size = new System.Drawing.Size(25, 25);
+            this.btnMail.TabIndex = 6;
+            this.btnMail.UseVisualStyleBackColor = false;
+            this.btnMail.Click += new System.EventHandler(this.btnMail_Click);
+            // 
+            // btnFB
+            // 
+            this.btnFB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
+            this.btnFB.BackgroundImage = global::Absolventska.Properties.Resources.facebook;
+            this.btnFB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFB.FlatAppearance.BorderSize = 0;
+            this.btnFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFB.Image = ((System.Drawing.Image)(resources.GetObject("btnFB.Image")));
+            this.btnFB.Location = new System.Drawing.Point(20, 3);
+            this.btnFB.Name = "btnFB";
+            this.btnFB.Size = new System.Drawing.Size(25, 25);
+            this.btnFB.TabIndex = 5;
+            this.btnFB.UseVisualStyleBackColor = false;
+            this.btnFB.Click += new System.EventHandler(this.btnFB_Click_1);
+            // 
             // btnPictures
             // 
             this.btnPictures.FlatAppearance.BorderSize = 0;
@@ -154,38 +198,6 @@
             this.panel2.Size = new System.Drawing.Size(1737, 34);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(302, 1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(162, 243);
-            this.panel3.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(25, 206);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tunga Editor";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(19, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 154);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnMinimize
             // 
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
@@ -215,48 +227,37 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnLinkedIn
+            // panel3
             // 
-            this.btnLinkedIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.btnLinkedIn.BackgroundImage = global::Absolventska.Properties.Resources.linkedin;
-            this.btnLinkedIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLinkedIn.FlatAppearance.BorderSize = 0;
-            this.btnLinkedIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLinkedIn.Location = new System.Drawing.Point(130, 3);
-            this.btnLinkedIn.Name = "btnLinkedIn";
-            this.btnLinkedIn.Size = new System.Drawing.Size(25, 25);
-            this.btnLinkedIn.TabIndex = 7;
-            this.btnLinkedIn.UseVisualStyleBackColor = false;
-            this.btnLinkedIn.Click += new System.EventHandler(this.btnLinkedIn_Click);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(302, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(162, 243);
+            this.panel3.TabIndex = 1;
             // 
-            // btnMail
+            // pictureBox1
             // 
-            this.btnMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.btnMail.BackgroundImage = global::Absolventska.Properties.Resources.envelope;
-            this.btnMail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMail.FlatAppearance.BorderSize = 0;
-            this.btnMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMail.Image = ((System.Drawing.Image)(resources.GetObject("btnMail.Image")));
-            this.btnMail.Location = new System.Drawing.Point(72, 4);
-            this.btnMail.Name = "btnMail";
-            this.btnMail.Size = new System.Drawing.Size(25, 25);
-            this.btnMail.TabIndex = 6;
-            this.btnMail.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(19, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 154);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnFB
+            // label1
             // 
-            this.btnFB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.btnFB.BackgroundImage = global::Absolventska.Properties.Resources.facebook;
-            this.btnFB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFB.FlatAppearance.BorderSize = 0;
-            this.btnFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFB.Image = ((System.Drawing.Image)(resources.GetObject("btnFB.Image")));
-            this.btnFB.Location = new System.Drawing.Point(20, 3);
-            this.btnFB.Name = "btnFB";
-            this.btnFB.Size = new System.Drawing.Size(25, 25);
-            this.btnFB.TabIndex = 5;
-            this.btnFB.UseVisualStyleBackColor = false;
-            this.btnFB.Click += new System.EventHandler(this.btnFB_Click_1);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(25, 206);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tunga Editor";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // firstUserControl1
             // 

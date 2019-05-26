@@ -7,6 +7,7 @@ namespace Absolventska
     public partial class SettingsUserControl : UserControl
     {
         UCManager manager = UCManager.GetInstance();
+        SerializationClass serialization = SerializationClass.GetInstance();
 
         public SettingsUserControl()
         {
@@ -29,13 +30,15 @@ namespace Absolventska
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Count() > 0)
+            if (textBox1.Text.Count() > 0 && textBox1.Text != manager.GetPath_files())
             {
-                manager.SetPath_files(textBox1.Text);
+                manager.SetPath_files(textBox1.Text, false);
                 manager.SetPath_words(textBox1.Text + @"\Words.txt");
                 MessageBox.Show("Path changed successfully.");
+                serialization.AddPathToReg();
             }
-            else MessageBox.Show("Please, insert a path.");
+
+            else MessageBox.Show("Please, insert a new path.");
         }
 
         private void btnDefault_Click(object sender, EventArgs e)
@@ -44,9 +47,10 @@ namespace Absolventska
 
             if (textBox1.Text.Count() >= 0)
             {
-                manager.SetPath_files(textBox1.Text);
+                manager.SetPath_files(textBox1.Text, false);
                 manager.SetPath_words(textBox1.Text + @"\Words.txt");
                 MessageBox.Show("Path set to default.");
+                serialization.AddPathToReg();
             }
 
             else MessageBox.Show("Please, insert a path.");

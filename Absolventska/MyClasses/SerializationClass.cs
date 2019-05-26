@@ -1,36 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Permissions;
+using System.Resources;
+using System.Collections;
 
 namespace Absolventska
 {
     class SerializationClass //: SecondUserControl
     {
-        UCManager manager;
+        UCManager manager = UCManager.GetInstance();
 
         public List<Button> browseBTNs = new List<Button>(); //SUC browse btns
         public List<PictureBox> PBs = new List<PictureBox>(); //SUC pictureboxes
         public List<TextBox> TBs = new List<TextBox>(); // SUC textboxes
-
+        
         public Dictionary<int, string> paths = new Dictionary<int, string>(); //index + path
         public Dictionary<int, string> words = new Dictionary<int, string>(); // index + words
         public Dictionary<string, string> output = new Dictionary<string, string>(); // words + paths
 
+        private static SerializationClass instance = new SerializationClass();
         private int numOfWords;
 
-        public void SetNumOfWords(int num)
+        public void SetNumOfWords(int num) //used in dynamic table
         {
             numOfWords = num;
         }
 
-        public void SetManager(UCManager uCManager)
+        public static SerializationClass GetInstance()
         {
-            manager = uCManager;
+            return instance;
         }
+
+        public void AddPathToReg()
+        {
+            if (Environment.GetEnvironmentVariable("Tunga", EnvironmentVariableTarget.User) == null)
+            {
+                Environment.SetEnvironmentVariable("Tunga", manager.GetPath_files(), EnvironmentVariableTarget.User);
+                MessageBox.Show("Register variable created.");
+            }
+
+            else
+            {
+                if (Environment.GetEnvironmentVariable("Tunga", EnvironmentVariableTarget.User) != manager.GetPath_files())
+                {
+                    Environment.SetEnvironmentVariable("Tunga", manager.GetPath_files(), EnvironmentVariableTarget.User);
+                    MessageBox.Show("Register Variable Updated");
+                }
+
+               /* else
+                {
+                    MessageBox.Show("Register already exists.");
+                }*/
+            }
+        } //adding current path_files to register for the app
 
         public void WordsToList()
         {
@@ -102,7 +130,5 @@ namespace Absolventska
 
             else MessageBox.Show("Missing words or pictures. Files export not successful. Tap the Reset button.");
         }
- 
-         
     }
 }
