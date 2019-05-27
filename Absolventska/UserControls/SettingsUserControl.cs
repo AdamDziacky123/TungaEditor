@@ -36,11 +36,12 @@ namespace Absolventska
             {
                 manager.SetPath_files(textBox1.Text, false);
                 manager.SetPath_words(textBox1.Text + @"\Words.txt");
-                MessageBox.Show("Path changed successfully.");
+                MessageBox.Show("Path changed successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 serialization.AddPathToReg();
             }
 
-            else MessageBox.Show("Please, insert a new path.");
+            else MessageBox.Show("Please, insert a new path.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         } //apply changes
 
         private void btnDefault_Click(object sender, EventArgs e) // setting default path + adding to register
