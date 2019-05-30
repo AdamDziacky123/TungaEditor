@@ -8,12 +8,12 @@
   IgnorableNamespaces="uap mp rescap">
 
   <Identity
-    Name="1a0c4fff-1e53-4182-a3ab-7906edb415a1"
+    Name="00c74be1-27bd-4de7-94f3-7b4e033902af"
     Publisher="CN=Adam"
     Version="1.0.0.0" />
 
   <Properties>
-    <DisplayName>WAP Project</DisplayName>
+    <DisplayName>UWPApp</DisplayName>
     <PublisherDisplayName>Adam</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
@@ -32,8 +32,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="WAP Project"
-        Description="WAP Project"
+        DisplayName="UWPApp"
+        Description="UWPApp"
         BackgroundColor="transparent"
         Square150x150Logo="Images\Square150x150Logo.png"
         Square44x44Logo="Images\Square44x44Logo.png">
