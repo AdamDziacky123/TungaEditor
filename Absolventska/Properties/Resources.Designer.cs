@@ -139,15 +139,5 @@ namespace TungaEditor.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] user32 {
-            get {
-                object obj = ResourceManager.GetObject("user32", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }
