@@ -187,7 +187,7 @@ namespace Absolventska
         private void BTNsetRows_Click(object sender, EventArgs e) // creating dynamic table + assigning objects + adding them to lists
         {
             //List<Button> BTNList = new List<Button>();
-            Image image = Absolventska.Properties.Resources.success; //Success image
+            Image image = TungaEditor.Properties.Resources.success; //Success image
             int tmp = (int)numericUpDown1.Value;
 
             PBs.Clear(); //clearing original lists
@@ -227,12 +227,13 @@ namespace Absolventska
                     Anchor = AnchorStyles.None,
                     Name = string.Format("TB{0}{1}", 0, i),
                     Font = new Font("Century Gothic", 10),
-                    MinimumSize = new Size(195, 32)
+                    MinimumSize = new Size(150, 30)
                 }, 0, i);
 
                 tableLayoutPanel1.Controls.Add(new Button
                 {
-                    Text = string.Format("Browse{0}{1}", 1, i),
+                    //Text = string.Format("Browse{0}{1}", 1, i),
+                    Text = "Browse",
                     TextAlign = ContentAlignment.MiddleCenter,
                     BackColor = Color.FromArgb(36, 46, 64),
                     ForeColor = Color.FromArgb(125, 225, 176),
@@ -241,7 +242,7 @@ namespace Absolventska
                     FlatStyle = FlatStyle.Flat,
                     Margin = new Padding(0),
                     Font = new Font("Century Gothic", 9),
-                    Size = new Size(75, 25)
+                    Size = new Size(75, 30)
                 }, 1, i);
 
                 tableLayoutPanel1.Controls.Add(new PictureBox
@@ -264,12 +265,13 @@ namespace Absolventska
                     Anchor = AnchorStyles.None,
                     Name = string.Format("TB{0}{1}", 3, i),
                     Font = new Font("Century Gothic", 10),
-                    MinimumSize = new Size(195, 32)
+                    MinimumSize = new Size(150, 30)
                 }, 3, i);
 
                 tableLayoutPanel1.Controls.Add(new Button
                 {
-                    Text = string.Format("Browse{0}{1}", 4, i),
+                    //Text = string.Format("Browse{0}{1}", 4, i),
+                    Text = "Browse",
                     TextAlign = ContentAlignment.MiddleCenter,
                     BackColor = Color.FromArgb(36, 46, 64),
                     ForeColor = Color.FromArgb(125, 225, 176),
@@ -278,7 +280,7 @@ namespace Absolventska
                     FlatStyle = FlatStyle.Flat,
                     Margin = new Padding(0),
                     Font = new Font("Century Gothic", 9),
-                    Size = new Size(75, 25)
+                    Size = new Size(75, 30)
                 }, 4, i);
 
                 tableLayoutPanel1.Controls.Add(new PictureBox

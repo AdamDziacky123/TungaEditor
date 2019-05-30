@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,10 +15,9 @@ namespace Absolventska
         List<Panel> panels = new List<Panel>();
         List<Button> buttons = new List<Button>();
 
+        Point UCPosition;
         protected string path_words = Environment.CurrentDirectory + @"\Tunga Files\Words.txt"; //save environment dir to string
-        
         protected string path_files = Environment.CurrentDirectory + @"\Tunga Files";
-
         private static UCManager instance = new UCManager();
             
         public static UCManager GetInstance()
@@ -50,6 +50,7 @@ namespace Absolventska
 
         #endregion
 
+        #region ListMethods
         public void Initiate(Form1 form)
         {
             AddButtonsToList(form);
@@ -76,15 +77,20 @@ namespace Absolventska
             buttons.Add(form.Controls.Find("btnPictures", true).FirstOrDefault() as Button);
             buttons.Add(form.Controls.Find("btnSettings", true).FirstOrDefault() as Button);
         }
+        #endregion
 
         public void ControlToFront(int index)
         {
             foreach (Control c in controls)
             {
                 c.Visible = false;
-                //MessageBox.Show(c.Name);
             }
 
+            //MessageBox.Show(Screen.PrimaryScreen.Bounds.Width.ToString());
+            if (Screen.PrimaryScreen.Bounds.Width == 1920 && Screen.PrimaryScreen.Bounds.Height == 1080) UCPosition = new Point(472, 150);
+            else if (Screen.PrimaryScreen.Bounds.Width == 1366 && Screen.PrimaryScreen.Bounds.Height == 768) UCPosition = new Point(300, 80);
+
+            controls[index].Location = UCPosition;
             controls[index].Visible = true;
             controls[index].BringToFront();
         }

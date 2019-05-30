@@ -1,27 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 using System.Diagnostics;
-using System.IO;
+//using System.Windows.Forms.Screen;
 
 namespace Absolventska
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form //// find out the resolution, create a variable in manager, set UC position according to that. Variable is set up according to current resolution. 
     {
         UCManager manager = UCManager.GetInstance();
 
         public Form1()
         {
             InitializeComponent();
-            Icon icon = Icon.ExtractAssociatedIcon(@"D:\Podklady\Absolventská\Logo\Icon.ico");
-            this.Icon = icon;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -87,5 +77,6 @@ namespace Absolventska
         }
 
         #endregion
+
     }
 }

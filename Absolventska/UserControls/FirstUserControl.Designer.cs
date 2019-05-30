@@ -38,7 +38,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::Absolventska.Properties.Resources.LogoEditorFinal;
+            this.pictureBox1.Image = global::TungaEditor.Properties.Resources.LogoEditorFinal;
             this.pictureBox1.Location = new System.Drawing.Point(448, 111);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 333);
@@ -52,7 +52,7 @@
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.btnStart.Location = new System.Drawing.Point(512, 572);
+            this.btnStart.Location = new System.Drawing.Point(512, 631);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(173, 58);
             this.btnStart.TabIndex = 11;

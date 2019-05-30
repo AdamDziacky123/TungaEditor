@@ -86,9 +86,10 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.btnReset.Location = new System.Drawing.Point(714, 725);
+            this.btnReset.Location = new System.Drawing.Point(536, 589);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(173, 58);
+            this.btnReset.Size = new System.Drawing.Size(130, 47);
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
@@ -99,9 +100,10 @@
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.btnConfirm.Location = new System.Drawing.Point(303, 725);
+            this.btnConfirm.Location = new System.Drawing.Point(227, 589);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(173, 58);
+            this.btnConfirm.Size = new System.Drawing.Size(130, 47);
             this.btnConfirm.TabIndex = 6;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
@@ -113,9 +115,10 @@
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
-            this.textBox11.Location = new System.Drawing.Point(340, -4);
+            this.textBox11.Location = new System.Drawing.Point(255, -3);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(491, 74);
+            this.textBox11.Size = new System.Drawing.Size(368, 59);
             this.textBox11.TabIndex = 8;
             this.textBox11.Text = "Adding Pictures";
             this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -125,11 +128,11 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.tableLayoutPanel1.ColumnCount = 6;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox10, 5, 4);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox9, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox8, 5, 3);
@@ -160,25 +163,27 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox6, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.textBox9, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.textBox8, 3, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(189, 250);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(142, 203);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 400);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(596, 325);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // pictureBox10
             // 
             this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
-            this.pictureBox10.Image = global::Absolventska.Properties.Resources.success;
-            this.pictureBox10.Location = new System.Drawing.Point(751, 342);
+            this.pictureBox10.Image = global::TungaEditor.Properties.Resources.success;
+            this.pictureBox10.Location = new System.Drawing.Point(564, 278);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox10.Size = new System.Drawing.Size(26, 28);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 56;
             this.pictureBox10.TabStop = false;
@@ -188,10 +193,11 @@
             // 
             this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.Image = global::Absolventska.Properties.Resources.success;
-            this.pictureBox9.Location = new System.Drawing.Point(354, 342);
+            this.pictureBox9.Image = global::TungaEditor.Properties.Resources.success;
+            this.pictureBox9.Location = new System.Drawing.Point(266, 278);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox9.Size = new System.Drawing.Size(26, 28);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 55;
             this.pictureBox9.TabStop = false;
@@ -201,10 +207,11 @@
             // 
             this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.pictureBox8.Image = global::Absolventska.Properties.Resources.success;
-            this.pictureBox8.Location = new System.Drawing.Point(751, 262);
+            this.pictureBox8.Image = global::TungaEditor.Properties.Resources.success;
+            this.pictureBox8.Location = new System.Drawing.Point(564, 213);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox8.Size = new System.Drawing.Size(26, 28);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 54;
             this.pictureBox8.TabStop = false;
@@ -214,10 +221,11 @@
             // 
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.Image = global::Absolventska.Properties.Resources.success;
-            this.pictureBox7.Location = new System.Drawing.Point(354, 262);
+            this.pictureBox7.Image = global::TungaEditor.Properties.Resources.success;
+            this.pictureBox7.Location = new System.Drawing.Point(266, 213);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox7.Size = new System.Drawing.Size(26, 28);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
@@ -227,10 +235,11 @@
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.Image = global::Absolventska.Properties.Resources.success;
-            this.pictureBox6.Location = new System.Drawing.Point(751, 182);
+            this.pictureBox6.Image = global::TungaEditor.Properties.Resources.success;
+            this.pictureBox6.Location = new System.Drawing.Point(564, 148);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox6.Size = new System.Drawing.Size(26, 28);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 52;
             this.pictureBox6.TabStop = false;
@@ -240,10 +249,11 @@
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.Image = global::Absolventska.Properties.Resources.success;
-            this.pictureBox5.Location = new System.Drawing.Point(354, 182);
+            this.pictureBox5.Image = global::TungaEditor.Properties.Resources.success;
+            this.pictureBox5.Location = new System.Drawing.Point(266, 148);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox5.Size = new System.Drawing.Size(26, 28);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 51;
             this.pictureBox5.TabStop = false;
@@ -253,10 +263,11 @@
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.Image = global::Absolventska.Properties.Resources.success;
-            this.pictureBox4.Location = new System.Drawing.Point(751, 102);
+            this.pictureBox4.Image = global::TungaEditor.Properties.Resources.success;
+            this.pictureBox4.Location = new System.Drawing.Point(564, 83);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox4.Size = new System.Drawing.Size(26, 28);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 50;
             this.pictureBox4.TabStop = false;
@@ -266,10 +277,11 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.Image = global::Absolventska.Properties.Resources.success;
-            this.pictureBox3.Location = new System.Drawing.Point(354, 102);
+            this.pictureBox3.Image = global::TungaEditor.Properties.Resources.success;
+            this.pictureBox3.Location = new System.Drawing.Point(266, 83);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox3.Size = new System.Drawing.Size(26, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 49;
             this.pictureBox3.TabStop = false;
@@ -279,10 +291,11 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Image = global::Absolventska.Properties.Resources.success;
-            this.pictureBox2.Location = new System.Drawing.Point(751, 22);
+            this.pictureBox2.Image = global::TungaEditor.Properties.Resources.success;
+            this.pictureBox2.Location = new System.Drawing.Point(564, 18);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.Size = new System.Drawing.Size(26, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 48;
             this.pictureBox2.TabStop = false;
@@ -295,9 +308,10 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.button10.Location = new System.Drawing.Point(651, 348);
+            this.button10.Location = new System.Drawing.Point(489, 283);
+            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.Size = new System.Drawing.Size(56, 19);
             this.button10.TabIndex = 46;
             this.button10.Text = "Browse ";
             this.button10.UseVisualStyleBackColor = true;
@@ -309,9 +323,10 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.button9.Location = new System.Drawing.Point(254, 348);
+            this.button9.Location = new System.Drawing.Point(191, 283);
+            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.Size = new System.Drawing.Size(56, 19);
             this.button9.TabIndex = 45;
             this.button9.Text = "Browse ";
             this.button9.UseVisualStyleBackColor = true;
@@ -323,9 +338,10 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.button8.Location = new System.Drawing.Point(651, 268);
+            this.button8.Location = new System.Drawing.Point(489, 218);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.Size = new System.Drawing.Size(56, 19);
             this.button8.TabIndex = 44;
             this.button8.Text = "Browse ";
             this.button8.UseVisualStyleBackColor = true;
@@ -337,9 +353,10 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.button7.Location = new System.Drawing.Point(254, 268);
+            this.button7.Location = new System.Drawing.Point(191, 218);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(56, 19);
             this.button7.TabIndex = 43;
             this.button7.Text = "Browse ";
             this.button7.UseVisualStyleBackColor = true;
@@ -351,9 +368,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.button6.Location = new System.Drawing.Point(651, 188);
+            this.button6.Location = new System.Drawing.Point(489, 153);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(56, 19);
             this.button6.TabIndex = 42;
             this.button6.Text = "Browse ";
             this.button6.UseVisualStyleBackColor = true;
@@ -365,9 +383,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.button5.Location = new System.Drawing.Point(254, 188);
+            this.button5.Location = new System.Drawing.Point(191, 153);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(56, 19);
             this.button5.TabIndex = 41;
             this.button5.Text = "Browse ";
             this.button5.UseVisualStyleBackColor = true;
@@ -379,9 +398,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.button4.Location = new System.Drawing.Point(651, 108);
+            this.button4.Location = new System.Drawing.Point(489, 88);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(56, 19);
             this.button4.TabIndex = 40;
             this.button4.Text = "Browse ";
             this.button4.UseVisualStyleBackColor = true;
@@ -393,9 +413,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.button3.Location = new System.Drawing.Point(254, 108);
+            this.button3.Location = new System.Drawing.Point(191, 88);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(56, 19);
             this.button3.TabIndex = 39;
             this.button3.Text = "Browse ";
             this.button3.UseVisualStyleBackColor = true;
@@ -407,9 +428,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.button2.Location = new System.Drawing.Point(651, 28);
+            this.button2.Location = new System.Drawing.Point(489, 23);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 38;
             this.button2.Text = "Browse ";
             this.button2.UseVisualStyleBackColor = true;
@@ -420,9 +442,10 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.textBox1.Location = new System.Drawing.Point(21, 24);
+            this.textBox1.Location = new System.Drawing.Point(15, 19);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 32);
+            this.textBox1.Size = new System.Drawing.Size(147, 27);
             this.textBox1.TabIndex = 10;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -432,9 +455,10 @@
             this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.textBox10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.textBox10.Location = new System.Drawing.Point(418, 344);
+            this.textBox10.Location = new System.Drawing.Point(313, 279);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(195, 32);
+            this.textBox10.Size = new System.Drawing.Size(147, 27);
             this.textBox10.TabIndex = 19;
             this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -445,9 +469,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.button1.Location = new System.Drawing.Point(254, 28);
+            this.button1.Location = new System.Drawing.Point(191, 23);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 20;
             this.button1.Text = "Browse ";
             this.button1.UseVisualStyleBackColor = true;
@@ -456,10 +481,11 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Image = global::Absolventska.Properties.Resources.success;
-            this.pictureBox1.Location = new System.Drawing.Point(354, 22);
+            this.pictureBox1.Image = global::TungaEditor.Properties.Resources.success;
+            this.pictureBox1.Location = new System.Drawing.Point(266, 18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(26, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
@@ -471,9 +497,10 @@
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.textBox2.Location = new System.Drawing.Point(418, 24);
+            this.textBox2.Location = new System.Drawing.Point(313, 19);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 32);
+            this.textBox2.Size = new System.Drawing.Size(147, 27);
             this.textBox2.TabIndex = 11;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -483,9 +510,10 @@
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.textBox3.Location = new System.Drawing.Point(21, 104);
+            this.textBox3.Location = new System.Drawing.Point(15, 84);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(195, 32);
+            this.textBox3.Size = new System.Drawing.Size(147, 27);
             this.textBox3.TabIndex = 12;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -495,9 +523,10 @@
             this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.textBox7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.textBox7.Location = new System.Drawing.Point(21, 264);
+            this.textBox7.Location = new System.Drawing.Point(15, 214);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(195, 32);
+            this.textBox7.Size = new System.Drawing.Size(147, 27);
             this.textBox7.TabIndex = 16;
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -507,9 +536,10 @@
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.textBox4.Location = new System.Drawing.Point(418, 104);
+            this.textBox4.Location = new System.Drawing.Point(313, 84);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(195, 32);
+            this.textBox4.Size = new System.Drawing.Size(147, 27);
             this.textBox4.TabIndex = 13;
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -519,9 +549,10 @@
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.textBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.textBox5.Location = new System.Drawing.Point(21, 184);
+            this.textBox5.Location = new System.Drawing.Point(15, 149);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(195, 32);
+            this.textBox5.Size = new System.Drawing.Size(147, 27);
             this.textBox5.TabIndex = 14;
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -531,9 +562,10 @@
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.textBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.textBox6.Location = new System.Drawing.Point(418, 184);
+            this.textBox6.Location = new System.Drawing.Point(313, 149);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(195, 32);
+            this.textBox6.Size = new System.Drawing.Size(147, 27);
             this.textBox6.TabIndex = 15;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -543,9 +575,10 @@
             this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.textBox9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.textBox9.Location = new System.Drawing.Point(21, 344);
+            this.textBox9.Location = new System.Drawing.Point(15, 279);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(195, 32);
+            this.textBox9.Size = new System.Drawing.Size(147, 27);
             this.textBox9.TabIndex = 18;
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -555,9 +588,10 @@
             this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.textBox8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.textBox8.Location = new System.Drawing.Point(418, 264);
+            this.textBox8.Location = new System.Drawing.Point(313, 214);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(195, 32);
+            this.textBox8.Size = new System.Drawing.Size(147, 27);
             this.textBox8.TabIndex = 17;
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -567,7 +601,8 @@
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.numericUpDown1.Location = new System.Drawing.Point(362, 138);
+            this.numericUpDown1.Location = new System.Drawing.Point(272, 112);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -579,7 +614,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 32);
+            this.numericUpDown1.Size = new System.Drawing.Size(90, 27);
             this.numericUpDown1.TabIndex = 10;
             this.numericUpDown1.Value = new decimal(new int[] {
             5,
@@ -592,9 +627,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label1.Location = new System.Drawing.Point(340, 180);
+            this.label1.Location = new System.Drawing.Point(255, 146);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 23);
+            this.label1.Size = new System.Drawing.Size(131, 21);
             this.label1.TabIndex = 11;
             this.label1.Text = "Number of rows";
             // 
@@ -604,9 +640,11 @@
             this.BTNsetRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNsetRows.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.BTNsetRows.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(225)))), ((int)(((byte)(176)))));
-            this.BTNsetRows.Location = new System.Drawing.Point(682, 138);
+            this.BTNsetRows.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTNsetRows.Location = new System.Drawing.Point(512, 112);
+            this.BTNsetRows.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BTNsetRows.Name = "BTNsetRows";
-            this.BTNsetRows.Size = new System.Drawing.Size(120, 32);
+            this.BTNsetRows.Size = new System.Drawing.Size(90, 27);
             this.BTNsetRows.TabIndex = 12;
             this.BTNsetRows.Text = "Set Rows";
             this.BTNsetRows.UseVisualStyleBackColor = false;
@@ -614,7 +652,7 @@
             // 
             // SecondUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.BTNsetRows);
@@ -624,8 +662,9 @@
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnConfirm);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SecondUserControl";
-            this.Size = new System.Drawing.Size(1200, 800);
+            this.Size = new System.Drawing.Size(900, 650);
             this.Load += new System.EventHandler(this.SecondUserControl_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
