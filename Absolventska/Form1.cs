@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Diagnostics;
-//using System.Windows.Forms.Screen;
 
 namespace Absolventska
 {
-    public partial class Form1 : Form //// find out the resolution, create a variable in manager, set UC position according to that. Variable is set up according to current resolution. 
+    public partial class Form1 : Form 
     {
         UCManager manager = UCManager.GetInstance();
 

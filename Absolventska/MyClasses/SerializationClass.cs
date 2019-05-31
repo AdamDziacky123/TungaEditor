@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Security.Permissions;
-using System.Resources;
-using System.Collections;
 
 namespace Absolventska
 {
-    class SerializationClass //: SecondUserControl
+    class SerializationClass 
     {
         UCManager manager = UCManager.GetInstance();
 
@@ -124,7 +118,6 @@ namespace Absolventska
                     File.Copy(output.Values.ElementAt(i), manager.GetPath_files() + "/" + output.Keys.ElementAt(i) + ".jpg", true);
                 }
 
-                //Reset();
                 MessageBox.Show("Files exported successfully.");
             }
 
